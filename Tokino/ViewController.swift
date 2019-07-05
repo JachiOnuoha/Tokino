@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
 }
 

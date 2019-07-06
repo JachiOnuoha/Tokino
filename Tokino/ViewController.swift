@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     //Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         resetButton.isEnabled = false
         stopButton.isEnabled = false
         startButton.isEnabled = true

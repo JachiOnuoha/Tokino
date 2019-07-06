@@ -28,6 +28,16 @@ class ViewController: UIViewController {
         resetButton.isEnabled = false
         stopButton.isEnabled = false
         startButton.isEnabled = true
+        
+        resetButton.layer.cornerRadius = 4.0
+        resetButton.layer.masksToBounds = true
+        resetButton.alpha = 0.7
+        stopButton.layer.cornerRadius = stopButton.bounds.width / 2.1
+        stopButton.layer.masksToBounds = true
+        
+        startButton.layer.cornerRadius = startButton.bounds.width / 2.1
+        startButton.layer.masksToBounds = true
+        
     }
     //Button actions
     @IBAction func resetDidTap(_ sender: Any)
@@ -39,6 +49,7 @@ class ViewController: UIViewController {
         resetButton.isEnabled = false
         stopButton.isEnabled = false
         startButton.isEnabled = true
+        timerLabel.textColor = UIColor.white
     }
     
     @IBAction func startDidTap(_ sender: Any)
@@ -49,6 +60,7 @@ class ViewController: UIViewController {
             resetButton.isEnabled = true
             stopButton.isEnabled = true
             startButton.isEnabled = false
+            timerLabel.textColor = UIColor.green
         }
     }
     
@@ -58,7 +70,7 @@ class ViewController: UIViewController {
         resetButton.isEnabled = true
         startButton.isEnabled = true
         stopButton.isEnabled = false
-        
+        timerLabel.textColor = UIColor.red
         isRunning = false
         timer.invalidate()
     }
